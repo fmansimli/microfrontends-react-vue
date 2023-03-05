@@ -1,12 +1,20 @@
 import React from "react";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-import LoginForm from "./components/form/LoginForm";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 
 const App = () => {
   return (
-    <div>
-      <LoginForm />
-    </div>
+    <BrowserRouter basename="auth">
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/login" />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

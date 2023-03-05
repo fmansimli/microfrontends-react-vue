@@ -1,6 +1,6 @@
 import React from "react";
 
-function LoginForm() {
+function RegisterForm() {
   return (
     <div>
       <div>
@@ -13,9 +13,9 @@ function LoginForm() {
         <input id="password" type="password" />
       </div>
       <br />
-      <button>login</button>
+      <button>register</button>
     </div>
   );
 }
 
-export default LoginForm;
+export default RegisterForm;
